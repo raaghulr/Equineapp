@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,8 +15,9 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +30,7 @@ public class ActivityAddVet extends AppCompatActivity {
     EditText etemail;
     EditText etbank ;
     Button Adddetails;
-    FirebaseFirestore mFirestore;
+    DatabaseReference databaseVet;
 
 
 
@@ -37,7 +39,7 @@ public class ActivityAddVet extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_vet);
 
-        mFirestore = FirebaseFirestore.getInstance();
+       databaseVet = FirebaseDatabase.getInstance().getReference("vet");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -53,36 +55,7 @@ public class ActivityAddVet extends AppCompatActivity {
          Adddetails.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 String name = etname.getText().toString();
-                 String companyname  = etcompanyname.getText().toString();
-                 String mobile = String.valueOf(etmobile.getText());
-                 String landline  = String.valueOf(etlandline.getText());
-                 String email  = etemail.getText().toString();
-                 String bank = etbank.getText().toString();
-
-                 Map<String,String> struserMap = new HashMap<>();
-                 struserMap.put("Name",name);
-                 struserMap.put("Company Name",companyname);
-                 struserMap.put("Email",email);
-                 struserMap.put("Bank Details",bank);
-                 struserMap.put("Mobile Number",mobile);
-                 struserMap.put("Landline Number", landline);
-
-                 mFirestore.collection("Vet")
-                         .add(struserMap)
-                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                     @Override
-                     public void onSuccess(DocumentReference documentReference) {
-                         Toast.makeText(ActivityAddVet.this, "Vet Details added to FireStore database!!!", Toast.LENGTH_SHORT).show();
-                     }
-                 })
-                         .addOnFailureListener(new OnFailureListener() {
-                     @Override
-                     public void onFailure(@NonNull Exception e) {
-                         String error = e.getMessage();
-                         Toast.makeText(ActivityAddVet.this,"Error : "+ error, Toast.LENGTH_SHORT).show();
-                     }
-                 });
+                 addvet();
 
              }
          });
@@ -106,6 +79,27 @@ public class ActivityAddVet extends AppCompatActivity {
     public boolean onSupportNavigateUp(){
         finish();
         return true;
+    }
+
+    private void addvet(){
+        String name = etname.getText().toString();
+        String companyname  = etcompanyname.getText().toString();
+        String mobile = String.valueOf(etmobile.getText());
+        String landline  = String.valueOf(etlandline.getText());
+        String email  = etemail.getText().toString();
+        String bank = etbank.getText().toString();
+        if(!TextUtils.isEmpty(name)){
+            String id = databaseVet.push().getKey();
+            Vet newvet = new Vet(id,name,companyname,mobile,landline,email,bank);
+            databaseVet.child(id).setValue(newvet);
+            Toast.makeText(this, "Vet Details Stored in Cloud!!!", Toast.LENGTH_SHORT).show();
+
+
+        }
+        else
+        {
+            Toast.makeText(this, "Please Enter Correct Value!!!", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
