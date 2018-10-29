@@ -19,8 +19,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_signout" />
-                            <entry key="sourceFile" value="C:\Users\raagh\Desktop\icons\signout.svg" />
+                            <entry key="outputName" value="ic_man" />
+                            <entry key="sourceFile" value="C:\Users\raagh\Desktop\icons\man.svg" />
                           </map>
                         </option>
                       </PersistentState>
