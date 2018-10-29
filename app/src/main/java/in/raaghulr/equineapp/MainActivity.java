@@ -1,5 +1,6 @@
 package in.raaghulr.equineapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -84,6 +85,9 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_horse_wallet) {
             // Handle the camera action
         } else if (id == R.id.nav_practitioners) {
+            Intent i = new Intent(MainActivity.this, ActivityAddVet.class);
+            startActivity(i);
+
 
         } else if (id == R.id.nav_calendar) {
 
