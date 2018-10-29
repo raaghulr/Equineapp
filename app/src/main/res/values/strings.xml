@@ -7,4 +7,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_add_vet">Add Vet</string>
+
+    <string name="title_activity_fullscreen">Equine App</string>
+    <string name="dummy_button">Login Button</string>
+    <string name="dummy_content">LOGIN CONTENT</string>
+    <string name="title_activity_horse_wallet">HorseWallet</string>
 </resources>

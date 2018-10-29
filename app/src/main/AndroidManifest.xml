@@ -12,7 +12,16 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ActivityAddVet"
+            android:label="@string/title_activity_add_vet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/FullscreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,8 +29,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityAddVet"
-            android:label="@string/title_activity_add_vet"
+            android:name=".HorseWallet"
+            android:label="@string/title_activity_horse_wallet"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
