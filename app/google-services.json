@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "474861984091",
+    "firebase_url": "https://equineapp-22c59.firebaseio.com",
+    "project_id": "equineapp-22c59",
+    "storage_bucket": "equineapp-22c59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474861984091:android:cb2eef601e96157d",
+        "android_client_info": {
+          "package_name": "in.raaghulr.equineapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474861984091-3j6dkm8bj6ni0bjst6cuiur8u1pri9pt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.raaghulr.equineapp",
+            "certificate_hash": "19e8dbf330bbcc46a3928e5a486c77b41d01ae12"
+          }
+        },
+        {
+          "client_id": "474861984091-4ne7p94ku7afmq95mtju7lp7mmfq41q1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUj8gtkmyIkyAdPKGg-Xvqvl2_jmRsxSI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474861984091-4ne7p94ku7afmq95mtju7lp7mmfq41q1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
