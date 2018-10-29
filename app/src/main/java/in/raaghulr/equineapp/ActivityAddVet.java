@@ -40,12 +40,19 @@ public class ActivityAddVet extends AppCompatActivity {
 
     public void MtdClear(View v){
         etname.setText("", TextView.BufferType.EDITABLE);
+
         etcompanyname.setText("", TextView.BufferType.EDITABLE);
         etmobile.setText("", TextView.BufferType.EDITABLE);
         etlandline.setText("", TextView.BufferType.EDITABLE);
         etemail.setText("", TextView.BufferType.EDITABLE);
         etbank.setText("", TextView.BufferType.EDITABLE);
         Toast.makeText(this, "Details Cleared!!!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
 
 }
