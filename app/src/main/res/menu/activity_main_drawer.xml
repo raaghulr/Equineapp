@@ -11,8 +11,35 @@
             android:title="Horse Wallet" />
         <item
             android:id="@+id/nav_practitioners"
-            android:icon="@drawable/ic_doctor"
-            android:title="Practitioners" />
+            android:title="Practitioners" >
+            <menu>
+                <item
+                    android:id="@+id/nav_vet"
+                    android:icon="@drawable/ic_doctor"
+                    android:title="Vet"/>
+                <item
+                    android:id="@+id/nav_farrier"
+                    android:icon="@drawable/ic_doctor"
+                    android:title="Farrier"/>
+                <item
+                    android:id="@+id/nav_chiropractor"
+                    android:icon="@drawable/ic_doctor"
+                    android:title="Chiropractor"/>
+                <item
+                    android:id="@+id/nav_dentist"
+                    android:icon="@drawable/ic_doctor"
+                    android:title="Dentist"/>
+                <item
+                    android:id="@+id/nav_trainer"
+                    android:icon="@drawable/ic_doctor"
+                    android:title="Trainer"/>
+                <item
+                    android:id="@+id/nav_massage"
+                    android:icon="@drawable/ic_doctor"
+                    android:title="Massage"/>
+            </menu>
+        </item>
+
         <item
             android:id="@+id/nav_calendar"
             android:icon="@drawable/ic_calendar"
