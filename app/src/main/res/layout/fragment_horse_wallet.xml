@@ -29,7 +29,8 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="6dp"
         android:onClick="mtd_new_practitioner"
-        android:text="New Practitioner registration"
+        android:text="     New Practitioner registration     "
+        android:background="@drawable/round_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image2" />
@@ -55,7 +56,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:text="New horse registration"
+        android:background="@drawable/round_button"
+        android:text="    New horse registration     "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />

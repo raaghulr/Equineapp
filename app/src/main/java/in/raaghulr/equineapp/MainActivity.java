@@ -84,10 +84,14 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_calendar) {
+            Intent i = new Intent(MainActivity.this, Calendar.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_alerts) {
 
         } else if (id == R.id.nav_signout) {
+            Intent i = new Intent(MainActivity.this, FullscreenActivity.class);
+            startActivity(i);
 
         }
 

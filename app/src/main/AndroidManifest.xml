@@ -12,7 +12,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ActivityAddVet"
             android:label="@string/title_activity_add_vet"
@@ -31,6 +31,10 @@
         <activity
             android:name=".HorseWallet"
             android:label="@string/title_activity_horse_wallet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Calendar"
+            android:label="@string/title_activity_calendar"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
