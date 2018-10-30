@@ -5,103 +5,119 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ActivityAddVet"
-    tools:showIn="@layout/activity_add_vet">
-
-    <Button
-        android:id="@+id/btn_clear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="MtdClear"
-        android:text="     Clear     "
-        android:background="@drawable/round_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_add_details"
-        app:layout_constraintTop_toBottomOf="@+id/et_bank_details" />
+    tools:context=".ActivityAddHorse"
+    tools:showIn="@layout/activity_add_horse">
 
     <EditText
-        android:id="@+id/et_bank_details"
+        android:id="@+id/et_weight"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="320dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Bank Details"
-        android:inputType="text"
+        android:hint="Weight"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_title" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/et_height"
+        app:layout_constraintTop_toBottomOf="@+id/tv_horse_title" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round_button"
+        android:onClick="MtdClear"
+        android:text="     Clear     "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_add_details"
+        app:layout_constraintTop_toBottomOf="@+id/et_weight" />
 
     <EditText
-        android:id="@+id/et_email"
+        android:id="@+id/et_height"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="312dp"
+        android:ems="10"
+        android:hint="Height"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/et_height2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_breed" />
+
+    <EditText
+        android:id="@+id/et_microchip_number"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="260dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Email"
-        android:inputType="textWebEmailAddress"
+        android:hint="Microchip_number"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_horse_title" />
 
     <EditText
-        android:id="@+id/et_mobile_number"
+        android:id="@+id/et_type"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="132dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Mobile Number"
-        android:inputType="number|phone"
+        android:hint="Type"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_horse_title" />
 
     <EditText
-        android:id="@+id/et_landline_number"
+        android:id="@+id/et_age"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="196dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="LandLine Number"
-        android:inputType="number|phone"
+        android:hint="Age"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_horse_title" />
 
     <EditText
-        android:id="@+id/et_company_name"
+        android:id="@+id/et_distingusihing_marks"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Company Name"
+        android:hint="Distinguishing Marks"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_horse_title" />
 
     <TextView
-        android:id="@+id/tv_vet_title"
+        android:id="@+id/tv_horse_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
-        android:text="Vet Registration"
+        android:text="Horse Registration"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,29 +126,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_name"
+        android:id="@+id/et_breed"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="Breed"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_vet_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_horse_title" />
 
     <Button
         android:id="@+id/btn_add_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="     Add Details     "
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/round_button"
+        android:text="     Add Details     "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_clear"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_bank_details" />
+        app:layout_constraintTop_toBottomOf="@+id/et_height" />
+
 </android.support.constraint.ConstraintLayout>

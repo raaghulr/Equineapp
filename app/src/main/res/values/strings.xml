@@ -13,4 +13,5 @@
     <string name="dummy_content">LOGIN CONTENT</string>
     <string name="title_activity_horse_wallet">HorseWallet</string>
     <string name="title_activity_calendar">Calendar</string>
+    <string name="title_activity_add_horse">ActivityAddHorse</string>
 </resources>

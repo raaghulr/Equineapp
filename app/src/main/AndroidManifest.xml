@@ -12,7 +12,10 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
 
         </activity>
         <activity
@@ -37,6 +40,10 @@
         <activity
             android:name=".Calendar"
             android:label="@string/title_activity_calendar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityAddHorse"
+            android:label="@string/title_activity_add_horse"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -25,6 +25,10 @@ public class HorseWallet extends AppCompatActivity {
         Intent i = new Intent(HorseWallet.this, ActivityAddVet.class);
         startActivity(i);
     }
+    public void mtd_new_horse(View v){
+        Intent i = new Intent(HorseWallet.this, ActivityAddHorse.class);
+        startActivity(i);
+    }
 
     @Override
     public boolean onSupportNavigateUp(){
