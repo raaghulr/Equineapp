@@ -94,6 +94,11 @@ public class MainActivity extends AppCompatActivity
             startActivity(i);
 
         }
+        else if (id == R.id.nav_vet) {
+            Intent i = new Intent(MainActivity.this, login.class);
+            startActivity(i);
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -14,4 +14,6 @@
     <string name="title_activity_horse_wallet">HorseWallet</string>
     <string name="title_activity_calendar">Calendar</string>
     <string name="title_activity_add_horse">ActivityAddHorse</string>
+    <string name="title_activity_login">Sign in</string>
+
 </resources>
